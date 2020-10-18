@@ -1,0 +1,166 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nunito:400,700'); */
+ * {
+	 transition: all 0.3s ease-out;
+}
+ /* html, body {
+	 height: 100%;
+	 font-family: "Nunito", sans-serif;
+	 font-size: 16px;
+}
+
+ h3 {
+	 color: #262626;
+	 font-size: 17px;
+	 line-height: 24px;
+	 font-weight: 700;
+	 margin-bottom: 4px;
+}
+ p {
+	 font-size: 17px;
+	 font-weight: 400;
+	 line-height: 20px;
+	 color: #666;
+} */
+ /* p.small {
+	 font-size: 14px;
+} */
+
+.go-corner {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 position: absolute;
+	 width: 32px;
+	 height: 32px;
+	 overflow: hidden;
+	 top: 0;
+	 right: 0;
+	 border-radius: 0 4px 0 32px;
+}
+
+.card1 .go-corner{
+    background-color: #1e06f7;
+}
+.card2 .go-corner{
+	/* background-color: #45ccb8; */
+	background-color: #0e918c;
+}
+.card3 .go-corner{
+	/* background-color: #f74a06; */
+	background-color: #dd2c00;
+}
+.card4 .go-corner{
+    background-color: #06c7f7;
+}
+.card5 .go-corner{
+    background-color: #f70606;
+}
+
+
+ .go-arrow {
+	 margin-top: -4px;
+	 margin-right: -4px;
+	 color: white;
+	 font-family: courier, sans;
+}
+ .card1, .card2, .card3, .card4, .card5 {
+	 display: block;
+	 position: relative;
+	 max-width: 262px;
+	 background-color: #f2f8f9;
+	 border-radius: 4px;
+	 padding: 32px 24px;
+	 margin: 12px;
+	 text-decoration: none;
+	 z-index: 0;
+	 overflow: hidden;
+}
+
+.card1{
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 #4506f1;
+} 
+
+.card2{
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 #03fcd2;
+}
+
+.card3{
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 #f13d06;
+}
+
+.card4{
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 #06cef1;
+} 
+
+.card5{
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 7px 0 #f10641;
+} 
+
+.card1:before,  .card2:before, .card3:before, .card4:before, .card5:before {
+	 content: "";
+	 position: absolute;
+	 z-index: -1;
+	 top: -16px;
+	 right: -16px;
+	 height: 32px;
+	 width: 32px;
+     border-radius: 32px;
+     animation: bummer 5s;
+	 transform: scale(1);
+	 transform-origin: 50% 50%;
+     transition: transform 0.5s ease-out;
+     animation-fill-mode: forwards;
+}
+
+.card1:before{
+	 /* background: #4506f1; */
+	 background: #0779e4;
+}  
+.card2:before{
+	/* background: #03fcd2; */
+	background: #2ec1ac;
+
+} 
+.card3:before{
+	/* background: #f13d06; */
+	background: #ea5455;
+
+} 
+.card4:before{
+	/* background: #06cef1; */
+	background: #28abb9;
+
+} 
+.card5:before{
+	/* background: #f10641; */
+	background: #ff4b5c;
+}
+
+@keyframes bummer {
+    100% {
+        transform: scale(21); 
+    }
+}
+
+ /* .card1:hover:before, .card2:hover:before, .card3:hover:before, .card4:hover:before, .card5:hover:before  {
+	 transform: scale(21);
+} */
+
+ /* .card1:hover p, .card2:hover p, .card3:hover p, .card4:hover p, .card5:hover p {
+	 transition: all 0.3s ease-out;
+	 color: rgba(255, 255, 255, 0.8);
+}
+ .card1:hover h3,  .card2:hover h3,  .card3:hover h3,  .card4:hover h3,  .card5:hover h3 {
+	 transition: all 0.3s ease-out;
+	 color: #fff;
+} */
+
+
+.card1 p, .card2 p, .card3 p, .card4 p, .card5 p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+}
+.card1 h3,  .card2 h3,  .card3 h3,  .card4 h3,  .card5 h3 {
+    transition: all 0.3s ease-out;
+    color: #fff;
+}

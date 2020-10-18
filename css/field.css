@@ -1,0 +1,78 @@
+body{
+  background-color: #eef8ff;
+}
+
+.checkout-container{
+    margin: 5% 5% 5% 5%;
+    
+}
+
+.field-set{
+    padding: 3%;
+    border: 1px solid #fff !important;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 10px 15px;
+}
+
+.field-legend{
+  color: #C31F48;
+  padding: 6% 5% 6% 5%;
+  border: solid;
+  border-color: #45ccb8;
+  width: 23%;
+  margin-left: 5%;
+  border-radius: 100px;
+  font-family: 'Gugi', cursive;
+  font-size: 15px;
+  background-color: white;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .col-back{
+  background: #fff;
+} */
+
+input[type=text], .row-country, .row-town {
+    border:0;
+    box-shadow:0 0 6px 3px rgba(221, 31, 31, 0.06);
+    border-radius:70px;
+    cursor: pointer;
+    font-family: 'Gugi', cursive;
+  }
+
+  label{
+    font-family: 'Gugi', cursive;
+  }
+
+  input[type=text]:hover, .row-country:hover, .row-town:hover{
+    border:solid;
+    border-color: mediumblue;
+    box-shadow:0 0 6px 3px rgba(9, 98, 233, 0.06);
+    border-radius:70px;
+  }
+
+  .row-fname, .row-lname{
+    padding: 7px 10px;
+    margin: 0 0 -20px 10px;
+}
+
+  .row-company, .row-address{
+      padding: 7px 10px;
+      margin: 0 0 5px 8px;
+  }
+
+  .row-country, .row-town{
+      margin-bottom: 30px;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .field-legend {
+        font-size: 10px;
+    }
+    .col-md-1{
+        margin-top: 5%;
+    }
+  }

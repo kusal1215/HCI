@@ -1,0 +1,114 @@
+body{
+    background-color: #eef8ff;
+    font-family: 'Gugi', cursive;
+}
+
+.complete-container{
+   margin: 50px auto 5px auto;
+   /* padding-right: 100px; */
+    /* max-width: 1200px !important;  */
+}
+
+.title{
+    font-family: 'Gugi', cursive;
+    font-weight: 400;
+    color: #45ccb8;
+    font-size: 50pt;
+    margin: 0 auto 7% 3%;
+}
+
+.col-complete-msg{
+    margin-top: 50px;
+}
+
+.img-trust{
+    height: 170px;
+    width: 250px;
+    margin-bottom: 20px;
+    
+}
+.img-paypal{
+    height: 90px;
+    width: 140px;
+    margin: 0 0 20px -40px;
+    
+}
+
+.image{
+box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hr-line{
+    width: 1180px;
+    background: #7c7979;
+    margin: 20px 0 40px -30px;
+}
+
+.header-line-number, .header-line-date, .header-line-total, .header-line-pay {
+    margin-bottom: 25px;
+}
+
+.header-line-number:after, .header-line-date:after, .header-line-total:after, .header-line-pay:after{
+    content: '';
+    background:#C31F48;
+    display: block;
+    height: 2px;
+    
+}
+
+.header-line-number:after, .header-line-pay:after{
+    width: 100px;
+    margin: 10px auto 1px 30px;
+}
+
+.header-line-date:after, .header-line-total:after{
+    width: 60px;
+    margin: 10px auto 1px 1px;
+}
+
+.table-summary{
+    margin-top: 60px;
+}
+
+.row-col1{
+    width:30%;
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .complete-container{
+        margin: 40px 0 5px 10px;
+    }
+    
+    .hr-line{
+        width: 350px;
+        margin-left: 10px;
+    }
+
+    .title{
+        font-weight: 50;
+        margin: 0 4% 7% 10%;
+    }
+
+    .image{
+        margin-left: -25px;
+    }
+
+    .img-trust{
+        height: 140px;
+        width: 200px;
+        margin-bottom: 20px;
+        
+    }
+    .img-paypal{
+        height: 70px;
+        width: 100px;
+        margin: 0 0 20px -10px;
+        
+    }
+
+    .col-md-3{
+        margin-left: 40px;
+    }
+}

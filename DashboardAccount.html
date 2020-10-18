@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Blinkee</title>
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"> -->
+        
+        <!--Font Awsome CDN-->
+        <script src="https://kit.fontawesome.com/6d0a6cebb3.js" crossorigin="anonymous"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Meddon&display=swap" rel="stylesheet">
+  
+
+        <!--Custom Stylesheet-->
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <!-- <link rel="stylesheet" href="css/dash.css"> -->
+        <link rel="stylesheet" href="css/card.css">
+        <link rel="stylesheet" href="css/dashstyles.css">
+        
+
+        <!---jQuery---->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+        <!-- <script type="text/javascript"  src="js/checkout.js"></script> -->
+
+        <!--lightslider.js-->
+        <!-- <script type="text/javascript" src="js/lightslider.js"></script>
+        <script type="text/javascript"  src="js/main.js"></script> -->
+
+        <!--Favicon Slider-->
+        <link rel="shortcut icon" href="assets/favB.png"> 
+
+        <!--Slick Slider-->
+        <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+              $('.nav_btn').click(function(){
+                $('.mobile_nav_items').toggleClass('active');
+              });
+            });
+
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+                }, false);
+                });
+                }, false);
+                })();
+
+        </script>
+
+    </head>
+    <body>
+        <input type="checkbox" id="check">
+        
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-12">
+                        <div class="btn-group">
+                            <button 
+                             class="btn border dropdown-toggle my-md-4 my-2 text-white" data-toggle="dropdown"
+                             aria-haspopup="true"
+                             aria-expanded="false"
+                             >
+                             $-USD
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">ERU-Euro</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 text-center">
+                        <h2 class="my-md-3 site-title text-white">Blinkee Store</h2>
+                    </div>
+                    <div class="col-md-4 col-12 text-right">
+                        <p class="my-md-4 header-links">
+                            <!--<a href="login.html" class="px-2">Sign In Or Create an Account</a>-->
+<!--                            <a href="#" class="bg-black-color">|</a>-->
+<!--                            <a href="#" class="px-1">Create an Account</a>-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <button class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">ABOUT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sample.html">SAMPLE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="custom.html">CUSTOM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard.html">ACCOUNT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testermonial.html">TESTIMONIALS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus1.html">CONTACT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reseller.html">RESELLER</a>
+                            </li>
+                        </ul>
+                        <div class="navbar-nav text-left">
+                            <li class="nav-item border rounded-circle mx-2 search-icon">
+                                <i class="fas fa-search p-2"></i>
+                            </li>
+                            <li class="nav-item border rounded-circle mx-2 repeat-icon">
+                                <i class="fas fa-circle-notch p-2"></i>
+                            </li>
+                            <li class="nav-item border rounded-circle mx-2 wishlist-icon">
+                                <i class="far fa-heart p-2"></i>
+                            </li>
+                            <li class="nav-item border rounded-circle mx-2 basket-icon">
+                                <a href="cart.html"><i class="fas fa-shopping-cart p-2"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Header -->
+
+        <!-- main section -->
+        
+        <!--mobile navigation bar start-->
+        <!-- <div class="col-md-3"> -->
+            <div class="mobile_nav">
+                <div class="nav_bar">
+                    <img src="assets/1.png" class="mobile_profile_image" alt="">
+                    <i class="fa fa-bars nav_btn"></i>
+                </div>
+                <div class="mobile_nav_items">
+                    <a href="#" ><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+                    <a href="#"><i class="fas fa-box"></i><span>Orders</span></a>
+                    <a href="#"><i class="fas fa-download"></i><span>Downloads</span></a>
+                    <a href="#"><i class="fas fa-map-marked-alt"></i><span>Addresses</span></a>
+                    <a href="#"><i class="fas fa-user-edit"></i><span>Account Details</span></a>
+                    <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+                    <a href="#"><i class="fa fa-power-off"></i><span>logout</span></a>
+                </div>
+            </div>
+            <!-- </div> -->
+            <!--mobile navigation bar end-->
+            
+            <!--sidebar start-->
+            <!-- <div class="col-md-2"> -->
+                <div class="sidebar">
+                    <div class="profile_info">
+                        <img src="assets/1.png" class="profile_image" alt="">
+                        <h4>Zeynep Shekercizade</h4>
+                    </div>
+                    <a href="Dashboard.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+                    <div class="icon-margin"></div>
+                    <a href="#"><i class="fas fa-box"></i><span>Orders</span></a>
+                    <a href="#"><i class="fas fa-download"></i><span>Downloads</span></a>
+                    <a href="DashAddresses.html"><i class="fas fa-map-marked-alt"></i><span>Addresses</span></a>
+                    <a href="DashboardAccount.html"  class="active-bar"><i class="fas fa-user-edit"></i><span>Account Details</span></a>
+                    <div class="space" style="margin-top: 150px;"></div>
+                    <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+                    <!-- <span><label for="check"><i class="fas fa-bars" id="sidebar_btn"></i>Togglebar</label></span> -->
+                    <a href="login.html"><i class="fa fa-power-off"></i><span>logout</span></a>
+                    <!-- <div class="space" style="padding-bottom: 50px;"></div> -->
+                </div>
+            </div>
+            <!--sidebar end-->
+            
+            
+            
+            <!-- <div class="col-md-9"> -->
+            <div class="content">
+                <div class="container-fluid p-0">
+                    <div class="togglebar">
+                        <span><label for="check" class="test">Toggle Sidebar</label></span>   
+                    </div>                         
+
+                    <div class="row">
+                        <!-- <div class="content-user-dashboard" style="background-image: url('assets/back2.jpg'); ">
+                            <div class="card-dashboard">
+                                    <h5 class="card-content-title text-center">HELLO FATIH SHEKERCIZADE (not Fatih Shekercizade? 
+                                    <a href="" id = "row-dashboard-content">LOGOUT</a>)
+                                    </h5>
+                                
+                                    <p class="card-title card-content-text">From your account dashboard, you can view your 
+                                    <a href="" id = "row-dashboard-content">recent orders</a>.
+                                    
+                                    <p class="card-title card-content-text">Dashboard will manage your<a href="" id = "row-dashboard-content">shipping and billing addresses</a>. </p>
+                                    
+                                    <p class="card-title card-content-text">You can <a href="" id = "row-dashboard-content">edit your password and account details</a>.</p>
+                            </div>
+                        </div> -->
+                    
+                        <div class="content-user-dashboard-account">
+                            <form class="needs-validation" novalidate>
+                                
+                                <div class="form-row row-section-one">
+                                    <div class="col-md-5 mb-3 md-form">
+                                        <label for="validationCustom012" class="required">First name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text " id="validationCustom012"><i class="far fa-user"></i></span>
+                                            </div>    
+                                            <input type="text" class="form-control" id="validationCustom012" aria-describedby="inputGroupPrepend2" placeholder="First name"
+                                            required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter first name.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 mb-3 md-form">
+                                        <label for="validationCustom022" class="required">Last name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text" id="validationCustom022"><i class="fas fa-user"></i></span>
+                                            </div>    
+                                            <input type="text" class="form-control" id="validationCustom022" aria-describedby="inputGroupPrepend2" placeholder="Last name"
+                                            required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter last name.
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row row-section-two">
+                                    <div class="col-md-10 mb-3 md-form">
+                                        <label for="validationCustomUsername2" class="required">E-mail Address</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text" id="validationCustomUsername2"><i class="fas fa-at"></i></span>
+                                            </div>
+                                            <input type="email" class="form-control" id="validationCustomUsername2" aria-describedby="inputGroupPrepend2" placeholder="E-mail"
+                                            required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter valid E-mail.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-primary btn-lg btn-rounded" type="submit">Save Changes</button>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="content-user-dashboard-password">
+                            <form class="needs-validation" novalidate>
+                                
+                                <div class="form-row row-section-one">
+                                    <div class="col-md-10 mb-3 md-form">
+                                        <label for="validationCurrentPassword" class="required">Current Password <em>(leave blank to leave unchanged) </em></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text " id="validationCurrentPassword"><i class="fas fa-user-lock"></i></span>
+                                            </div>    
+                                            <input type="text" class="form-control" id="validationCurrentPassword" aria-describedby="inputGroupPrepend2" placeholder="Current Pssword"
+                                            required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter current password.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row row-section-two">
+                                    <div class="col-md-5 mb-3 md-form">
+                                        <label for="validationNewPassword" class="required">New Password <em>(leave blank to leave unchanged)</em></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text" id="validationNewPassword"><i class="fas fa-unlock-alt"></i></span>
+                                            </div>    
+                                            <input type="text" class="form-control" id="validationNewPassword" aria-describedby="inputGroupPrepend2" placeholder="New Password">
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter new password.
+                                            </div>
+                                        </div> 
+                                    </div>
+                               
+                                
+                                    <div class="col-md-5 mb-3 md-form">
+                                        <label for="validationConfirmPassword" class="required">Confirm New Password</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text" id="validationConfirmPassword"><i class="fas fa-lock"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" id="validationConfirmPassword" aria-describedby="inputGroupPrepend2" placeholder="Confirm Password">
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter valid E-mail.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-primary btn-lg btn-rounded" type="submit">Save Changes</button>
+
+                            </form>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+
+        <!-- end of the main section -->
+
+        <footer>
+            <!--footer--->
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download Our App</h3>
+                            <p>Download App for Android and ios mobile phone.</p>
+                            <div class="app-logo">
+                                <img src="assets/play-store.png">
+                                <img src="assets/app-store.png">
+                            </div>
+                        </div>
+                        <div class="footer-col-2">
+                            <img src="assets/blinkee.png" alt="">
+                            <p>Magic Matt’s Brilliant Blinkys provides exciting
+                                glow in the dark toys, flashing jewelry, blinking pins,
+                                flashy blinkys and accessories for the twenty-first century.</p>
+                        </div>
+                        <div class="footer-col-3">
+                            <h3>Useful Links</h3>
+                            <ul>
+                                <li>Home</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                                <li>Cart</li>
+                                <li>Checkout</li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-3">
+                            <h3>Follow Us</h3>
+                            <ul>
+                                <li>Account</li>
+                                <li>Custom</li>
+                                <li>Blinkee.com Resellers and Dropshippers</li>
+                                <li>Shipping Policy</li>
+                                <li>Return Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="copyright">Copyright 2020 - Blinkee.com</p>
+                </div>
+            </section>
+        </footer>
+
+        <!-- <script src="bootstrap-input-spinner-master/src/bootstrap-input-spinner.js"></script>
+        <script>
+            $("input[type='number']").inputSpinner();
+        </script> -->
+
+        <!-- JS, Popper.js, and jQuery -->
+
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+       
+        
+    </body>
+</html>

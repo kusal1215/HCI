@@ -1,0 +1,289 @@
+
+
+/*import fonts from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato&family=Roboto&family=Sofia&display=swap');
+
+#body{
+    background-color: #eef8ff;
+    background-size: cover;
+    font-family: 'Cormorant', serif;
+}
+:root{
+    --light-gray: #7F7F7F;
+    --primary-color: #45ccb8;
+    --boader:#2b3032;
+    --black:#000000;
+    --text-color: #ff686b;
+    --roboto:"Roboto",sans-serif;
+    --gugi:"Gugi",cursive;
+    --sofia:"Sofia",cursive;
+}
+/*header{*/
+/*   */
+/*    background-color: var(--primary-color);*/
+/*    font-family: var(--roboto);*/
+/*}*/
+
+/*header .site-title{*/
+/*    font-family: var(--gugi);*/
+/*}*/
+
+/*.container .dropdown-toggle,*/
+/*.container .dropdown-item{*/
+/*    font-size: 0.7em;*/
+/*}*/
+
+/*.header-links a{*/
+/*    font-size:0.9em;*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*}*/
+
+
+/*!*Navigation Menu*!*/
+/*.navbar-nav{*/
+/*    padding: 0.8em 0em;*/
+/*}*/
+
+/*.navbar-nav .nav-link{*/
+/*    font-size: 0.9em;*/
+/*    color: var(--light-gray)!important;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.navbar-nav .nav-item .nav-link{*/
+/*    padding: 0 1.3em;*/
+/*}*/
+
+/*.navbar-nav .nav-item .nav-link:hover{*/
+/*    color: var(--primary-color)!important;*/
+/*}*/
+
+/*.navbar-nav .nav-item .fas:hover,*/
+/*.navbar-nav .nav-item .far:hover{*/
+/*    color: var(--primary-color)!important;*/
+/*}*/
+
+
+.container-fluid {
+    margin-top: 80px !important
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 7px
+}
+
+.small {
+    letter-spacing: 0.5px !important
+}
+
+.card-header img {
+    border: 5px solid white !important
+}
+
+.outside {
+    position: inherit;
+    top: -50%
+}
+
+.card {
+    border-radius: 20px !important;
+    box-shadow: 2px 2px 5px 0px rgb(100, 108, 170);
+    transition: 0.8s
+}
+
+.card-header {
+    border-radius: 20px !important
+}
+
+.card-footer {
+    border-radius: 20px !important
+}
+
+hr {
+    background-color: rgb(146, 154, 236);
+    border: 1px solid;
+    border-radius: 20px;
+    color: rgb(146, 154, 236);
+    height: 5px;
+    width: 70px !important
+}
+
+.bold {
+    font-weight: 500
+}
+
+.profile-pic {
+    margin-bottom: -5px !important
+}
+
+.quotes {
+    position: relative;
+    top: -10px
+}
+
+.quotes-down {
+    position: relative;
+    top: -4 px
+}
+
+.fa {
+    color: rgb(174, 178, 219);
+    cursor: pointer
+}
+
+.card-footer .fa {
+    font-size: 20px !important
+}
+
+.name {
+    margin-top: -50px !important
+}
+
+.container-fluid:hover .card:not(:hover) {
+    transform: scale(0.9)
+}
+
+@media (max-width: 1000px) {
+    .container-fluid:hover .card:not(:hover) {
+        transform: scale(1)
+    }
+}
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.footer p{
+    color: #8a8a8a;
+}
+
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+}
+
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img{
+   width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3,.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.footer hr{
+    border: none;
+    background:#b5b5b5;
+    height: 1px;
+    margin: 0px 5px 5px 0px;
+    text-align: center;
+}
+
+.copyright{
+    text-align: center;
+}
+#para {
+    background-color: cornsilk;
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+
+
+}
+#para:hover{
+    width: 1020px;
+    margin: auto;
+    margin-top: 20px;
+
+
+}
+
+#parahead {
+    text-align: center;
+    color: rgb(125, 158, 250);
+    background-color: cornsilk;
+}
+#para1{
+    background-color: cornsilk;
+
+    text-align: center;
+    color: darkgrey;
+
+}
+
+/*blog card  Testarmonial*/
+
+.flip-card {
+  background-color: transparent;
+    margin: auto;
+  height: 300px;
+    transform: rotateY(10deg);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+
+  color: #ffffff;
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Blinkee</title>
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+
+        <!--Font Awsome CDN-->
+     <script src="https://kit.fontawesome.com/6d0a6cebb3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Meddon&display=swap" rel="stylesheet">
+  
+
+        <!--Custom Stylesheet-->
+        <link rel="stylesheet" href="css/field.css">
+        
+
+        <!---jQuery---->
+        <script type="text/javascript" src="js/jQuery.js"></script>
+
+
+    </head>
+    <body>
+        <div class="checkout-container">
+            <div class="row">
+                <div class="col-md-5 col-back">
+                    <form>
+                        <fieldset class = "border field-set">
+                            <legend class = "field-legend">BILLING<br> DETAILS</legend>
+
+                            <!-- FirstName Section -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3">
+                                    <label for="fname">First name:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" class = "form-control row-fname" name="fname"><br><br>
+                                </div>
+                            </div>
+
+                            <!-- LastName Section -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3">
+                                    <label for="lname">Last name:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" class = "form-control row-lname" name="lname"><br><br>
+                                </div>
+                            </div>
+                            
+                            <!-- Company Section -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="cname">Company:</label>                                       
+                                </div>      
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class = "form-control row-company" name="cname"><br><br> 
+                                </div>
+                            </div>
+
+                            <!-- Street Address Section -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="sname">Street Address:</label>      
+                                </div>   
+                            </div>   
+
+                            <div class = "row">
+                                <div class="col-md-12">
+                                    <input type="text" class = "form-control row-address" name="sname">
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <div class="col-md-12">
+                                    <input type="text" class = "form-control row-address" name="sname"><br><br>
+                                </div>
+                            </div>
+
+
+                            <!-- Country Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="country">Country:</label>      
+                                </div>   
+                            
+                                <div class="col-md-8">
+                                    <select class="form-control row-country" id="country">
+                                        <option>England</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                        <option>Ireland</option>
+                                        <option>Japan</option>
+                                        <option>Switzerland</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                             <!-- Town Section -->
+                             <div class="row">
+                                <div class="col-md-4">
+                                    <label for="town">Town/City:</label>      
+                                </div>   
+                            
+                                <div class="col-md-8">
+                                    <select class="form-control row-town" id="town">
+                                        <option>Brighton</option>
+                                        <option>Derby</option>
+                                        <option>Exter</option>
+                                        <option>Hereford</option>
+                                        <option>Lincon</option>
+                                        <option>Oxford</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                             <!-- Postcode Section -->
+                             <div class="row">
+                                <div class="col-md-4">
+                                    <label for="zip">Postcode/Zip:</label>      
+                                </div>   
+                           
+                                <div class="col-md-8">
+                                    <input type="text" class = "form-control row-zip" name="zip"><br><br>
+                                </div>
+                            </div>
+
+                            <!-- PhoneNumber Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="number">Phone Number:</label>      
+                                </div>   
+                           
+                                <div class="col-md-8">
+                                    <input type="text" class = "form-control row-num" name="number"><br><br>
+                                </div>
+                            </div>
+
+                            <!-- Email Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="mail">Email:</label>      
+                                </div>   
+                           
+                                <div class="col-md-8">
+                                    <input type="text" class = "form-control row-mail" name="mail"><br><br>
+                                </div>
+                            </div>
+
+                        </fieldset> 
+                    </form>  
+                </div>
+
+                <div class="col-md-1 col-back"></div>
+
+                <div class="col-md-5 col-back">
+                    <form>
+                        <fieldset class = "border field-set">
+                            <legend class = "field-legend">SHIPPING<br> DETAILS</legend>
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname"><br><br>
+                            <label for="lname">Last name:</label>
+                            <input type="text" id="lname" name="lname"><br><br>
+                        </fieldset> 
+                    </form>  
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

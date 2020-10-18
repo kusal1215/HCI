@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Blinkee</title>
+        
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+        
+        
+
+        <!--Font Awsome CDN-->
+        <script src="https://kit.fontawesome.com/6d0a6cebb3.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Meddon&display=swap" rel="stylesheet">
+  
+        <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+ 
+        <!-- SweetAlerts2 script -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="sweetalert2.all.min.js"></script>
+        <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+        <!--Custom Stylesheet-->
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/checkout.css">
+        
+        <!-- disable/enable script jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+        <!-- JS, Popper.js, and jQuery -->
+        
+        <script type="text/javascript"  src="js/checkout.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
+        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+        <!-- <script type="text/javascript"  src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script> -->
+
+        <!---jQuery---->
+        <!-- <script type="text/javascript" src="js/jQuery.js"></script> -->
+        <!-- <script type="text/javascript"  src="js/checkout.js"></script> -->
+
+        <!--lightslider.js
+        <script type="text/javascript" src="js/lightslider.js"></script>
+        <script type="text/javascript"  src="js/main.js"></script>-->
+
+        <!--Favicon Slider-->
+        <link rel="shortcut icon" href="assets/favB.png">
+
+        <!--Slick Slider
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
+
+        <script>
+            // validation login
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+                $(".stack-top").css("height", "270px");
+                } 
+                
+                form.classList.add('was-validated');
+               
+                    $(".btn-foward").click(function(){
+                        $(".stack-top").css("display", "none");
+                        $(".section-first").css("display", "none");
+                        $(".section-icon").css("height", "300px");
+                    }); 
+        
+            
+                }, false);
+                });
+                }, false);
+            })();
+
+
+            // validation form
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('need-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+
+                
+                $(".overlay-hidden").click(function(){
+                    $(".cover").css("display", "none");
+                });
+
+                }, false);
+                });
+                }, false);
+            })();
+
+            // Payment Selection
+            $(document).ready(function(){
+                /* by default hide all radio_content div elements except first element */
+                $(".content .radio_content").hide();
+                $(".content .radio_content:first-child").hide();
+    
+                /* when any radio element is clicked, Get the attribute value of that clicked radio element and show the radio_content div element which matches the attribute value and hide the remaining tab content div elements */
+                $(".radio_wrap").click(function(){
+                  var current_raido = $(this).attr("data-radio");
+                  $(".content .radio_content").hide();
+                  $("."+current_raido).show();
+                  $(".wrapper").height(500);
+                  
+                });
+
+                $('input[name=payment]').change(function(){
+                    $(".btn-proceed").css("display", "block");
+                });
+
+            });
+
+        </script>
+
+
+        <!-- <style>
+            .home-main{
+			background: #5812c5;
+			color:#fff;
+			padding: 13%;
+			text-align: center;
+		}
+		
+		.home-main button{
+			background: #fff;
+			color: #5812c5;
+			border-radius: 0;
+			font-weight: 700;
+			width: 16%;
+			height: 50px;
+			top: 4%;
+			margin-top: 3%;
+		}
+		.home-main button:hover{
+			transition: 1s ease;
+			color:#5812c5;
+			width: 19%;
+		}
+		
+        
+       
+
+        </style> -->
+
+    </head>
+    <body>
+        <div class="progress" id="scrollIndicator"></div> 
+
+         <!-- Header -->
+         <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-12">
+                        <div class="btn-group">
+                            <button 
+                             class="btn border dropdown-toggle my-md-4 my-2 text-white" data-toggle="dropdown"
+                             aria-haspopup="true"
+                             aria-expanded="false"
+                             >
+                             $-USD
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">ERU-Euro</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 text-center">
+                        <h2 class="my-md-3 site-title text-white">Blinkee Store</h2>
+                    </div>
+                    <div class="col-md-4 col-12 text-right">
+                        <p class="my-md-4 header-links">
+                            <a href="login.html" class="px-2">Sign In Or Create an Account</a>
+<!--                            <a href="#" class="bg-black-color">|</a>-->
+<!--                            <a href="#" class="px-1">Create an Account</a>-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <button class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products.html">ABOUT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sample.html">SAMPLE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="custom.html">CUSTOM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">ACCOUNT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testermonial.html">TESTIMONIALS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus1.html">CONTACT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reseller.html">RESELLER</a>
+                            </li>
+                        </ul>
+                        <div class="navbar-nav text-left">
+                            <li class="nav-item border rounded-circle mx-2 search-icon">
+                                <i class="fas fa-search p-2"></i>
+                            </li>
+                            <li class="nav-item border rounded-circle mx-2 repeat-icon">
+                                <i class="fas fa-circle-notch p-2"></i>
+                            </li>
+                            <li class="nav-item border rounded-circle mx-2 wishlist-icon">
+                                <i class="far fa-heart p-2"></i>
+                            </li>
+                            <li class="nav-item border rounded-circle mx-2 basket-icon">
+                                <a href="cart.html"><i class="fas fa-shopping-cart p-2"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- /Header -->
+
+
+         <!--------------------------------------- main section -------------------------------------------------->
+        
+        <!-- section-01 -->
+        <div class="container-fluid section-icon">
+            <!-- details section -->
+            <div class="container px-4 py-5 mx-auto">
+                <div class="row flex">
+                    <div class="image text-center">  
+                        <img class="img-trust" src="assets/trustpilot.png" alt="">
+                        <img class="img-paypal" src="assets/verified-paypal.png" alt="">
+                    </div>
+
+                    <div class="card section-hidden">
+                        <div class="row">    
+                            <div class="row">
+                                <h5>HAVE AN AMAZON ACCOUNT <span class="blinker"> ?</span></h5> 
+                            <!-- </div> -->
+                            
+                            <!-- <div class="col-md-3">-->
+                                <button class="btn btn-sm btn-rounded btn-sm-amazon" type="submit"><i class="fab fa-amazon fa-2x"><em>Amazon Pay</em></i></button>
+                            </div>
+
+                            <div class="card stack-top">
+                                <div class="row"><h5>RETURNING CUSTOMER <span class="blinker"> ?</span> </h5></div>
+                                <div class="row">
+                                    <!-- <div class="col-md-3"><i class="far fa-user border fa-4x rounded-circle user-border"></i></div> -->
+                                    <img src="assets/profile.jpg" class="user-border" alt="">
+                                    <div class="col-md-9">
+                                        <form class="needs-validation" novalidate>
+                                        <div class="form-row">
+                                            <div class="col-md-10 mb-1 md-form">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="validationCustom012"><i class="far fa-user"></i></span>
+                                                    </div>    
+                                                    <input type="text" class="form-control" id="validationCustom012" aria-describedby="inputGroupPrepend2" placeholder="User name"
+                                                    required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please enter user name.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 mb-1 md-form">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="validationCustom022"><i class="fas fa-user"></i></span>
+                                                    </div>    
+                                                    <input type="text" class="form-control" id="validationCustom022" aria-describedby="inputGroupPrepend2" placeholder="Password"
+                                                    required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please enter password.
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                            <em>Forget Your Password <span class="blinker">?</span></em>   
+                                            <div style="margin-bottom: 10px;"></div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                <div class="pretty p-icon p-smooth check-text">
+                                                    <input type="checkbox" />
+                                                    <div class="state p-danger">
+                                                        <i class="icon fa fa-check"></i>
+                                                        <label>REMEMBER ME</label>
+            
+                                                    
+                                                    </div>
+                                                </div>
+                                                </div>
+            
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <button class="btn-foward" ><i class="fa fa-arrow-right fa-2x"></i></button>
+                                                    </div>
+                                                </div>
+            
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row flex">
+                    <div class="card section-first">
+                        <div class="row">    
+                            <!-- <div class="col-md-6"> -->
+                                <h3>HAVE <em>AN</em> <em>AMAZON</em> <em>ACCOUNT</em> <em><span class="blinker">?</span></em></h3> 
+                            <!-- </div> -->
+                            
+                            <!-- <div class="col-md-6"> -->
+                                <button class="btn btn-lg btn-rounded btn-amazon" type="submit"><i class="fab fa-amazon fa-2x"><em>Amazon Pay</em></i></button>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- section-02 -->
+        <div class="container-fluid section-cart">
+               <!-- Shopping Cart Summary -->
+               <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="card cart">
+                            <div class="title-text"><h2 class="header-line text-center">ORDER SUMMARY</h2><div class="text-right btn-edit"><a href="#">EDIT</a></div></div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="book"> <img src="assets/items/cat-silicone-lamps-500x500.jpg" class="book-img"> </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="row description">
+                                                <div class="my-auto flex-column d-flex pad-left">
+                                                    <h6 class="mob-text">Slingshot Flying Helicopter with multicolor LED </h6>
+                                                    <!-- <p class="mob-text">Yuval Noah Harari</p> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <h6 class="mob-text">QTY: 1</h6>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <h6 class="mob-text">$0.36</h6>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cart-hr"><hr></div>
+
+                                    <div class="row ">
+                                        <div class="col-lg-4">
+                                            <div class="book"> <img src="assets/items/HTB1NVfli_TI8KJjSsph763FppXa3.png_.webp" class="book-img"> </div> <!--https://i.imgur.com/2DsA49b.jpg-->
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="row description">
+                                                <div class="my-auto flex-column d-flex pad-left">
+                                                    <h6 class="mob-text">Slingshot Flying Helicopter with multicolor LED </h6>
+                                                    <!-- <p class="mob-text">Yuval Noah Harari</p> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <h6 class="mob-text">QTY: 1</h6>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <h6 class="mob-text">$0.36</h6>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4 mt-2 align-self-center">
+                                    <div class="border border-danger note">
+                                        <div class="row d-flex justify-content-between px-4">
+                                            <p class="mb-1 text-left">Subtotal</p>
+                                            <h6 class="mb-1 text-right">$23.49</h6>
+                                        </div>
+                                        <div class="row d-flex justify-content-between px-4">
+                                            <p class="mb-1 text-left">Shipping</p>
+                                            <h6 class="mb-1 text-right">$2.99</h6>
+                                        </div>                                
+                                        <div class="row d-flex justify-content-between px-4">
+                                            <p class="mb-1 text-left">Total Tax</p>
+                                            <h6 class="mb-1 text-right">$2.99</h6>
+                                        </div>
+                                        <div class="summary-hr"><hr></div>
+                                        <div class="row d-flex justify-content-between px-4" id="tax">
+                                            <p class="mb-1 text-left">Total (tax included)</p>
+                                            <h6 class="mb-1 text-right">$26.48</h6>
+                                        </div> 
+                                    </div>
+                                    <button class="btn-block btn-blue" id="message" onclick="sweetAlert()"> <span> <span id="checkout">HAVE A COUPON</span> <i class="fas fa-chevron-circle-down"></i></span> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------- form starts here ------------------------------------------------->
+        <form class="need-validation" novalidate action="complete.html" method="POST">
+
+            <!-- section-03 -->
+            <div class="container-fluid home-content1">
+                <div class="row">
+                    <div class="col-md-6 content1-left">
+                        
+                            <fieldset class = "border field-set">
+                                <legend class = "field-legend">BILLING DETAILS</legend>
+
+                                <!-- FirstName Section -->
+                                <div class="row">
+                                    <!-- <div class="col-md-3"></div> -->
+                                    <div class="col-md-4">
+                                        <label for="fname" class="required">First name:</label>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <input type="text" class = "form-control row-fname" name="fname" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter first name.
+                                        </div>
+                                        <!-- <br> -->
+                                    </div>
+                                </div>
+                              
+                                <!-- LastName Section -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="lastname" class="required">Last name:</label>      
+                                    </div>   
+                            
+                                    <div class="col-md-7">
+                                        <input type="text" class = "form-control row-num" name="lastname" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter last name.
+                                        </div>
+                                        <!-- <br> -->
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 10px;"></div>
+                                <!-- Company Section -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="cname">Company:</label>                                       
+                                    </div>      
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <input type="text" class = "form-control row-company" name="cname" placeholder="OPTIONAL">
+                                        <div class="valid-feedback">
+                                            Company name is optional.
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter company name.
+                                        </div>
+                                        <br> 
+                                    </div>
+                                </div>
+
+                                <!-- Street Address Section -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="sname" class="required">Street Address:</label>      
+                                    </div>   
+                                </div>   
+
+                                <div class = "row">
+                                    <div class="col-md-11">
+                                        <input type="text" class = "form-control row-address" name="sname" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter street address.
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                                <!-- <div class = "row">
+                                    <div class="col-md-11">
+                                        <input type="text" class = "form-control row-address" name="sname"><br><br>
+                                    </div>
+                                </div> -->
+
+
+                                <!-- Country Section -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="country" class="required">Country:</label>      
+                                    </div>   
+                                
+                                    <div class="col-md-7">
+                                        <select class="form-control row-country" id="country" required>
+                                            <option value="">Select</option>
+                                            <option>England</option>
+                                            <option>France</option>
+                                            <option>Germany</option>
+                                            <option>Ireland</option>
+                                            <option>Japan</option>
+                                            <option>Switzerland</option>
+                                        </select>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please select country.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Town Section -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="town" class="required">Town/City:</label>      
+                                    </div>   
+                                
+                                    <div class="col-md-7">
+                                        <select class="form-control row-town" id="town" required>
+                                            <option value="">Select</option>
+                                            <option>Brighton</option>
+                                            <option>Derby</option>
+                                            <option>Exter</option>
+                                            <option>Hereford</option>
+                                            <option>Lincon</option>
+                                            <option>Oxford</option>
+                                        </select>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please select town.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Postcode Section -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="zip" class="required">Postcode/Zip:</label>      
+                                    </div>   
+                            
+                                    <div class="col-md-7">
+                                        <input type="text" class = "form-control row-zip" name="zip" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter postcode/ zip.
+                                        </div>
+                                        <!-- <br> -->
+                                    </div>
+                                </div>
+
+                                <!-- PhoneNumber Section -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="number" class="required">Phone Number:</label>      
+                                    </div>   
+                            
+                                    <div class="col-md-7">
+                                        <input type="text" class = "form-control row-num" name="number" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter phone number.
+                                        </div>
+                                        <!-- <br> -->
+                                    </div>
+                                </div>
+
+                                <!-- Email Section -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="mail" class="required">Email:</label>      
+                                    </div>   
+                            
+                                    <div class="col-md-7">
+                                        <input type="text" class = "form-control row-mail" name="mail" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter e-mail address.
+                                        </div>
+                                        <!-- <br> -->
+                                    </div>
+                                </div>
+
+                            </fieldset> 
+                        
+                    </div>
+                    <div class="col-md-6 content1-right">
+                        <label for="shipping-checkbox" style="font-size: 20px;">Same as Billing Address:</label>
+                        <input type="checkbox" id="shipping-checkbox" style="width: 30px; height: 25px; margin-left: 10px;">
+                        <br>
+                        
+                        <fieldset id="shipping" class = "border field-set">
+                            <legend class = "field-legend">SHIPPING DETAILS</legend>
+
+                            <!-- FirstName Section -->
+                            <div class="row">
+                                <!-- <div class="col-md-3"></div> -->
+                                <div class="col-md-4">
+                                    <label for="fname" class="required">First name:</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="text" class = "form-control row-fname" name="fname" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter first name.
+                                    </div>
+                                    <!-- <br> -->
+                                </div>
+                            </div>
+                          
+                            <!-- LastName Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="lastname" class="required">Last name:</label>      
+                                </div>   
+                        
+                                <div class="col-md-7">
+                                    <input type="text" class = "form-control row-num" name="lastname" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter last name.
+                                    </div>
+                                    <!-- <br> -->
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom: 10px;"></div>
+                            <!-- Company Section -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="cname">Company:</label>                                       
+                                </div>      
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <input type="text" class = "form-control row-company" name="cname" placeholder="OPTIONAL">
+                                    <div class="valid-feedback">
+                                        Company name is optional.
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter company name.
+                                    </div>
+                                    <br> 
+                                </div>
+                            </div>
+
+                            <!-- Street Address Section -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="sname" class="required">Street Address:</label>      
+                                </div>   
+                            </div>   
+
+                            <div class = "row">
+                                <div class="col-md-11">
+                                    <input type="text" class = "form-control row-address" name="sname" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter street address.
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                            <!-- <div class = "row">
+                                <div class="col-md-11">
+                                    <input type="text" class = "form-control row-address" name="sname"><br><br>
+                                </div>
+                            </div> -->
+
+
+                            <!-- Country Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="country" class="required">Country:</label>      
+                                </div>   
+                            
+                                <div class="col-md-7">
+                                    <select class="form-control row-country" id="country" required>
+                                        <option value="">Select</option>
+                                        <option>England</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                        <option>Ireland</option>
+                                        <option>Japan</option>
+                                        <option>Switzerland</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select country.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Town Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="town" class="required">Town/City:</label>      
+                                </div>   
+                            
+                                <div class="col-md-7">
+                                    <select class="form-control row-town" id="town" required>
+                                        <option value="">Select</option>
+                                        <option>Brighton</option>
+                                        <option>Derby</option>
+                                        <option>Exter</option>
+                                        <option>Hereford</option>
+                                        <option>Lincon</option>
+                                        <option>Oxford</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please select town.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Postcode Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="zip" class="required">Postcode/Zip:</label>      
+                                </div>   
+                        
+                                <div class="col-md-7">
+                                    <input type="text" class = "form-control row-zip" name="zip" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter postcode/ zip.
+                                    </div>
+                                    <!-- <br> -->
+                                </div>
+                            </div>
+
+                            <!-- PhoneNumber Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="number" class="required">Phone Number:</label>      
+                                </div>   
+                        
+                                <div class="col-md-7">
+                                    <input type="text" class = "form-control row-num" name="number" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter phone number.
+                                    </div>
+                                    <!-- <br> -->
+                                </div>
+                            </div>
+
+                            <!-- Email Section -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="mail" class="required">Email:</label>      
+                                </div>   
+                        
+                                <div class="col-md-7">
+                                    <input type="text" class = "form-control row-mail" name="mail" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter e-mail address.
+                                    </div>
+                                    <!-- <br> -->
+                                </div>
+                            </div>
+
+                        </fieldset> 
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- section-04 -->
+            <div class="container-fluid home-content2">
+            
+            <!-- <p><span>News</span> and <span>announcements</span> for all things <span>Bootstrap</span>, including new <span>releases</span> and <span>Bootstrap Themes</span>.</p>
+            <div class="card payment"> -->
+                
+            <div class="cover">
+                <button type = "submit" class="overlay-hidden" ><span>Click here to pay</span> <i class="fa fa-arrow-right fa-2x"></i></button>
+            </div>
+    
+            
+            <div class="title-text"><h2 class="header-line text-center">PAYMENT SELECTION</h2></div>
+
+            <div class="wrapper ">
+
+                <!-- Credit Card -->
+                <div class="row">
+                    <div class="col-md-12 no-padding">
+                        <div class="radio_tabs ">
+                            <label class="radio_wrap" data-radio="radio_1">
+                                <input type="radio" name="payment" class="enable_tb input">
+                                <span class="radio_mark">
+                                    CREDIT CARD
+                                    <i class="fab fa-cc-discover fa-2x"></i>
+                                    <i class="fab fa-cc-amex fa-2x"></i>
+                                    <i class="fab fa-cc-mastercard fa-2x"></i>
+                                    <i class="fab fa-cc-visa fa-2x"></i>
+                                    <i class="fas fa-credit-card fa-2x"></i>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="content">
+                            <div class="radio_content radio_1">
+                                <div class="form-row form-row-content">
+                                    <div class="form-group col-md-5">
+                                    <label for="inputEmail4">Card Number</label>
+                                    <input type="text" class="form-control" id="card-number" placeholder="xxxx-xxxx-xxxx" disabled="disabled" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter card number.
+                                    </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                    <label for="inputPassword4">Exp</label>
+                                    <input type="text" class="form-control" id="exp" placeholder="mm/yy" disabled="disabled" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter expiration date.
+                                    </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputPassword4">Cvc</label>
+                                        <input type="password" class="form-control" id="cvc" placeholder="***" disabled="disabled" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter CVC number.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+            
+                <!-- Paypal/ Money Order -->
+                <div class="row">
+                    <div class="col-md-6 no-padding">
+                        <div class="radio_tabs">
+                            <label class="radio_wrap" data-radio="radio_2">
+                                <input type="radio" name="payment" class="input">
+                                <span class="radio_mark">
+                                    PAYPAL
+                                    <i class="fab fa-paypal fa-2x"></i>
+                                    <i class="fab fa-cc-paypal fa-2x"></i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="content rad_2">
+                            <div class="radio_content radio_2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card border-success mb-3 describe" >
+                                            <div class="card-body">
+                                                <h5 class="card-title header-line-number title-describe text-left">PAY VIA PAYPAL</h5>
+                                                <!-- <div class="row"> -->
+                                                    <p class="card-text text-describe ">You can pay using your PayPal Account</p>                                                
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 no-padding">            
+                        <div class="radio_tabs">
+                            <label class="radio_wrap" data-radio="radio_3">
+                                <input type="radio" name="payment" class="input">
+                                <span class="radio_mark">
+                                    MONEY ORDER 
+                                    <i class="fas fa-money-check-alt fa-2x"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="content rad_3">
+                            <div class="radio_content radio_3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card border-success mb-3 describe" >
+                                            <div class="card-body">
+                                                <h5 class="card-title header-line-number title-describe text-left">PLEASE SEND YOUR MONEY ORDER TO</h5>
+                                                <!-- <div class="row"> -->
+                                                    <p class="card-text text-describe">Blinkee.com.<br> LLC 769 Center BI STE 58, <br>Fairfax CA 94930</p>                                                
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            
+
+                <div class="row row-button text-center">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block btn-proceed">CONFIRM ORDER</button>
+                </div>
+            </div>	
+
+        </form>
+        <!------------------------------- form ends here ----------------------------------------->
+  
+        <!-- </div> -->
+        <!-- end of the main section -->
+
+        <footer>
+            <!--footer--->
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download Our App</h3>
+                            <p>Download App for Android and ios mobile phone.</p>
+                            <div class="app-logo">
+                                <img src="assets/play-store.png">
+                                <img src="assets/app-store.png">
+                            </div>
+                        </div>
+                        <div class="footer-col-2">
+                            <img src="assets/blinkee.png" alt="">
+                            <p>Magic Matt’s Brilliant Blinkys provides exciting
+                                glow in the dark toys, flashing jewelry, blinking pins,
+                                flashy blinkys and accessories for the twenty-first century.</p>
+                        </div>
+                        <div class="footer-col-3">
+                            <h3>Useful Links</h3>
+                            <ul>
+                                <li>Home</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                                <li>Cart</li>
+                                <li>Checkout</li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-3">
+                            <h3>Follow Us</h3>
+                            <ul>
+                                <li>Account</li>
+                                <li>Custom</li>
+                                <li>Blinkee.com Resellers and Dropshippers</li>
+                                <li>Shipping Policy</li>
+                                <li>Return Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="copyright">Copyright 2020 - Blinkee.com</p>
+                </div>
+            </section>
+        </footer>
+
+           <!-- Promo Code -->
+        <script>
+            function sweetAlert() {
+                swal({
+                    content: {
+                    element: "input",
+                    attributes: {
+                        placeholder: "Type your Promo Code",
+                        type: "text",
+                    },
+                },
+            });
+        }
+         </script>
+
+        <!-- scroll indication -->
+        <script type="text/javascript"> 
+            // window.addEventListener('scroll', 
+            //         moveScrollIndicator); 
+    
+            // const scrollIndicatorElt = 
+            //     document.getElementById('scrollIndicator'); 
+    
+            // const maxHeight = 
+            //     window.document.body.scrollHeight 
+            //     - window.innerHeight; 
+    
+            // function moveScrollIndicator(e) { 
+            //     const percentage = 
+            //         ((window.scrollY) / maxHeight) * 100; 
+    
+            //     scrollIndicatorElt.style.width 
+            //         = percentage + '%'; 
+            // } 
+            var h = document.documentElement,
+            b = document.body,
+            st = 'scrollTop',
+            sh = 'scrollHeight',
+            progress = document.querySelector('.progress'),
+            scroll;
+
+            document.addEventListener('scroll', function() {
+            scroll = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+            progress.style.setProperty('--scroll', scroll + '%');
+            });
+        </script>
+        
+        <!-- Disable shipping details -->
+        <script>
+            // Wait for the page to finish loading
+            document.addEventListener('DOMContentLoaded', function () {
+            // Attach `change` event listener to checkbox
+            document.getElementById('shipping-checkbox').onchange = toggleBilling;
+            }, true);
+
+            function toggleBilling() {
+                // Select the billing text fields
+                var billingItems = document.querySelectorAll('#shipping input[type="text"]');
+                var selectionItems = document.querySelectorAll('#shipping select');
+
+                // Toggle the billing text fields
+                for (var i = 0; i < billingItems.length; i++) {
+                    billingItems[i].disabled = !billingItems[i].disabled;
+                }
+                for (var i = 0; i < selectionItems.length; i++) {
+                    selectionItems[i].disabled = !selectionItems[i].disabled;
+                }
+
+            }
+        </script>
+
+        <!-- enable card details -->
+        <script>
+            $('input:radio').click(function() { 
+                //  $("#otherDevText").prop("disabled",true);
+                $("#card-number").prop("disabled",true);
+                $("#exp").prop("disabled",true);
+                $("#cvc").prop("disabled",true);
+                if($(this).hasClass('enable_tb')) {
+                    $("#card-number").prop("disabled",false);
+                    $("#exp").prop("disabled",false);
+                    $("#cvc").prop("disabled",false);
+                }
+            });
+        </script>
+
+        <!-- <script src="bootstrap-input-spinner-master/src/bootstrap-input-spinner.js"></script>
+        <script>
+            $("input[type='number']").inputSpinner();
+        </script> -->
+
+        <!-- JS, Popper.js, and jQuery -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+        
+    </body>
+</html>
